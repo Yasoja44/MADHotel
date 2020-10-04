@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "343985990948",
+    "firebase_url": "https://customrentalguide.firebaseio.com",
+    "project_id": "customrentalguide",
+    "storage_bucket": "customrentalguide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343985990948:android:38ea4e166638db47eb17b1",
+        "android_client_info": {
+          "package_name": "com.example.customrental_guide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343985990948-0004erae4pf536uuim8isuqk8ic1q8aq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.customrental_guide",
+            "certificate_hash": "4552eeafa636850b9600a38636f34fd144cbc083"
+          }
+        },
+        {
+          "client_id": "343985990948-o3c7uta3fbc3pr3ekms44vga6hnmpsdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxMx10ljIepxpkuRXtHZZnSgCcFdFDswE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343985990948-o3c7uta3fbc3pr3ekms44vga6hnmpsdo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
