@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".AddBookingDetails">
+
+
+    <TextView
+        android:id="@+id/lb_Rtype2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="6dp"
+        android:text="Budget Room"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.152" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="208dp"
+        android:layout_height="44dp"
+        android:background="@drawable/custom_edt_btn"
+        android:hint="@string/hint_btnSub"
+        android:text="CONFRIM"
+        android:textColor="#ECEBEB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.915" />
+
+    <TextView
+        android:id="@+id/textView65"
+        android:layout_width="90dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+
+        android:text="Room No:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#786868"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.167" />
+
+    <TextView
+        android:id="@+id/roomNo1"
+        android:layout_width="23dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:hint="@string/lb_roomNo"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#786868"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.167" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="184dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="2dp"
+        android:text="Booking Details"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#786868"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <EditText
+        android:id="@+id/adultNo"
+        android:layout_width="137dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:hint="@string/hintAdultNo"
+        android:inputType="number"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
+
+    <EditText
+        android:id="@+id/childNo"
+        android:layout_width="130dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:hint="@string/hintChildNo"
+        android:inputType="number"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.786"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322" />
+
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="248dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/calender_in"
+        android:drawablePadding="12dp"
+        android:hint="Check-In (dd/mm/yyyy)"
+        android:inputType="date"
+
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.539"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/date2"
+        android:layout_width="248dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/calender_out"
+        android:drawablePadding="12dp"
+        android:hint="Check-Out (dd/mm/yyyy)"
+        android:inputType="date"
+
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
