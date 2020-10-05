@@ -183,18 +183,15 @@ public class EditFood extends AppCompatActivity implements View.OnClickListener 
 
         try {
 
-            if (/*!(String.valueOf(dateTemp.charAt(2))).equals("-") || !(String.valueOf(dateTemp.charAt(5))).equals("-") || */dateTemp.length() >=8) {
+            if (dateTemp.length() >=8) {
                 Toast.makeText(getApplicationContext(), "Invalid Date, Follow DD-MM-YYYY format", Toast.LENGTH_SHORT).show();
-            } else if (/*!(String.valueOf(timeTemp.charAt(2))).equals(":") || */timeTemp.length() >=8) {
+            } else if (timeTemp.length() >=8) {
                 Toast.makeText(getApplicationContext(), "Invalid Time, Follow HH:MM format", Toast.LENGTH_SHORT).show();
             } else {
 
 
                 updateMap = new HashMap<String, Object>();
                 updateMap.put("orderID", orderID.getText().toString().trim());
-                //updateMap.put("foodType",foodName.getText().toString().trim());
-                //updateMap.put("foodAmount",foodAmount.getText().toString().trim());
-                //updateMap.put("roomNo",roomNo.getText().toString().trim());
                 updateMap.put("orderDate", orderDate.getText().toString().trim());
                 updateMap.put("orderTime", orderTime.getText().toString().trim());
 

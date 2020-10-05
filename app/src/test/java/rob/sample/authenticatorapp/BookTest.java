@@ -30,20 +30,16 @@ public class BookTest {
         //give right output
         Boolean result1 = addBookingDetails.checkNo("2","2");
         assertEquals(true,result1);
-
         Boolean result2 = addBookingDetails.checkNo("5","5");
         assertEquals(false,result2);
-
         Boolean result3 = addBookingDetails.checkNo("5","1");
         assertEquals(false,result3);
-
         Boolean result4 = addBookingDetails.checkNo("2","7");
         assertEquals(false,result4);
 
         //give wrong output
         Boolean result5 = addBookingDetails.checkNo("2","2");
         assertEquals(false,result5);
-
         Boolean result6 = addBookingDetails.checkNo("7","7");
         assertEquals(true,result5);
     }

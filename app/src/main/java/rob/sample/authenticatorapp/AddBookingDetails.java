@@ -128,10 +128,7 @@ public class AddBookingDetails extends AppCompatActivity  {
 
             @Override
             public void onClick(View view) {
-
-
                 dbRef = FirebaseDatabase.getInstance().getReference("Booking");
-
                 try {
                     if (TextUtils.isEmpty(adultNo.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Empty Adult No", Toast.LENGTH_SHORT).show();
@@ -150,18 +147,16 @@ public class AddBookingDetails extends AppCompatActivity  {
                         String id = dbRef.push().getKey();
                         String Uid=getIntent().getStringExtra("ID");
 
-
                         boolean yes = checkNo(adNo,chNo);
 
                         if(yes == true) {
 
                             BookRoom Brooms = new BookRoom(id, rNo, adNo, chNo, dt1, dt2, Uid);
 
-                            //Saving the Artist
                             dbRef.child(id).setValue(Brooms);
 
                             dbRef.push().setValue(bookR);
-                            //dbRef.child("bookR1").setValue(bookR);
+
                             Toast.makeText(getApplicationContext(), "Successfully Inserted", Toast.LENGTH_SHORT).show();
                             clearControl();
                             Intent intent = new Intent(AddBookingDetails.this, Home2.class);

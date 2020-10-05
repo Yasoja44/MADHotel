@@ -20,11 +20,6 @@ public class AddDoctor extends AppCompatActivity implements View.OnClickListener
     Button btnAdd,btnShow;
     DatabaseReference dbRef;
     DoctorsMaster doc;
-    //int count = 0;
-    //String temp,countString;
-
-
-    //public static final String EXTRA_MESSAGE = " ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,8 +80,6 @@ public class AddDoctor extends AppCompatActivity implements View.OnClickListener
             else if (TextUtils.isEmpty(txtdemail.getText().toString()))
                 Toast.makeText(getApplicationContext(), "Empty Email", Toast.LENGTH_SHORT).show();
             else {
-
-
                 doc.setDoctorID(Integer.parseInt(txtdid.getText().toString().trim()));
                 doc.setDoctorName(txtdname.getText().toString().trim());
                 doc.setDoctorSpeciality(txtdspecilaity.getText().toString().trim());
@@ -103,8 +96,6 @@ public class AddDoctor extends AppCompatActivity implements View.OnClickListener
                         count += 1;
                     }
                 }
-
-
                 if(phoneTemp.length() != 10){
                     Toast.makeText(getApplicationContext(), "Need 10 digits", Toast.LENGTH_SHORT).show();
                 }else if(count != 1){
@@ -114,8 +105,6 @@ public class AddDoctor extends AppCompatActivity implements View.OnClickListener
                     Toast.makeText(getApplicationContext(), "Successfully Inserted", Toast.LENGTH_SHORT).show();
                     clearControls();
                 }
-
-
 
             }
         } catch (NumberFormatException nfe) {

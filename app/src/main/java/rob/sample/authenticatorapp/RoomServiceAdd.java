@@ -196,17 +196,15 @@ public class RoomServiceAdd extends AppCompatActivity implements View.OnClickLis
                 ord.setOrderedDateTime(now.toString().trim());
 
                 Double Total = findTotal(unitPrice,Double.parseDouble(txtAmount.getText().toString().trim()));
-                //Double Total = unitPrice * (Double.parseDouble(txtAmount.getText().toString().trim()));
                 ord.setPrice(Total);
 
 
-                ////////////////
                 String dateTemp = txtDate.getText().toString().trim();
                 String timeTemp = txtTime.getText().toString().trim();
 
-                if(/*!(String.valueOf(dateTemp.charAt(2))).equals("-") || !(String.valueOf(dateTemp.charAt(5))).equals("-") || */dateTemp.length() <= 8){
+                if(dateTemp.length() <= 8){
                     Toast.makeText(getApplicationContext(), "Invalid Date, Follow DD-MM-YYYY format"+dateTemp.length(), Toast.LENGTH_SHORT).show();
-                }else if(/*!(String.valueOf(timeTemp.charAt(2))).equals(":") ||*/ timeTemp.length()  <= 3){
+                }else if( timeTemp.length()  <= 3){
                     Toast.makeText(getApplicationContext(), "Invalid Time, Follow HH:MM format", Toast.LENGTH_SHORT).show();
                 }else{
                     dbRef.push().setValue(ord);
@@ -224,7 +222,7 @@ public class RoomServiceAdd extends AppCompatActivity implements View.OnClickLis
                             .setContentTitle("ORDER")
                             .setContentText(message1 +" Has Been Successfully Ordered  Rs." + Total)
                             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                            //.setContentIntent(pendingIntent)
+
                             .setAutoCancel(true);
 
                     NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
@@ -240,7 +238,7 @@ public class RoomServiceAdd extends AppCompatActivity implements View.OnClickLis
 
     public void Show(){
         Intent intent2 = new Intent(this,FoodShowAdmin.class);
-        //intent2.putExtra(EXTRA_MESSAGE2, String.valueOf(count));
+
         startActivity(intent2);
     }
 

@@ -107,11 +107,8 @@ public class DeleteFood extends AppCompatActivity implements View.OnClickListene
                             yes2 = true;
                         }
                     }
-
                 }
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 

@@ -89,8 +89,6 @@ public class EditDoctor extends AppCompatActivity implements View.OnClickListene
 
             }
         });
-
-
     }
 
     public void Edit(){
@@ -121,10 +119,7 @@ public class EditDoctor extends AppCompatActivity implements View.OnClickListene
             updateMap.put("doctorPhone",txtdphone.getText().toString().trim());
             updateMap.put("doctorEmail",txtdemail.getText().toString().trim());
 
-
-
                 updateQuery.addListenerForSingleValueEvent(new ValueEventListener() {
-
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -134,10 +129,8 @@ public class EditDoctor extends AppCompatActivity implements View.OnClickListene
                             clearControls();
                         }
                     }
-
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
-
                 }
             });
         }
