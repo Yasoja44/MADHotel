@@ -83,4 +83,11 @@
     <string name="lb_amount">0.00</string>
     <string name="btn_cancel">Cancel Booking</string>
     <string name="btn_edit">Edit</string>
+
+    <string name="aboutustext">Just over five years ago, we Archivitus started this hotel business with only a single hotel that was
+        located at Matara. \n\nBut with the help of all the hardworking staff, we were able to become the massive hotel chain you see now.
+        \n\nWe did this by providing the best hospitality that anyone can imagine and this app is just the next step in our goal to becoming the
+        best that we can imagine.\n\nWith that being said, all of us at Archivitus hope that all of you lovely customers will a great day!\n\n
+        </string>
+    <string name="about2txt">Email: archivitus@gmail.com\nContact No: 041-2222222</string>
 </resources>

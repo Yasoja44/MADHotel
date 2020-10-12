@@ -160,6 +160,7 @@ public class EditFood extends AppCompatActivity implements View.OnClickListener 
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                         for (DataSnapshot updateSnapshot : dataSnapshot.getChildren()) {
+
                             LocalDateTime now = LocalDateTime.now();
                             String then = updateSnapshot.child("orderedDateTime").getValue().toString();
                             LocalDateTime thenLocal = LocalDateTime.parse(then);

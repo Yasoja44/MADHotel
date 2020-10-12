@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="rob.sample.authenticatorapp">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,13 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".ShowGuide"></activity>
+        <activity android:name=".About"></activity>
+        <activity android:name=".ShowGuide" />
         <activity android:name=".CustomRental" />
         <activity android:name=".ManageGuideDetails" />
-        <activity android:name=".RentalMain"/>
-        <activity android:name=".AdminBooking_DetailsList"/>
-        <activity android:name=".Booking_DetailsList"/>
+        <activity android:name=".RentalMain" />
+        <activity android:name=".AdminBooking_DetailsList" />
+        <activity android:name=".Booking_DetailsList" />
         <activity android:name=".EditBookingDetails" />
         <activity android:name=".AddBookingDetails" />
         <activity android:name=".RoomList" />
@@ -28,8 +29,8 @@
         <activity android:name=".feedbackUser" />
         <activity android:name=".Login" />
         <activity android:name=".Register" />
-        <activity android:name=".RegisterMain"/>
-        <activity android:name=".ServicesShow2"></activity>
+        <activity android:name=".RegisterMain" />
+        <activity android:name=".ServicesShow2" />
         <activity android:name=".Home2" />
         <activity android:name=".FoodMain" />
         <activity android:name=".DeleteFood" />

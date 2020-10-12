@@ -100,7 +100,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         Toast.makeText(getApplicationContext(), "Login First", Toast.LENGTH_SHORT).show();
     }
     public void About(){
-        Toast.makeText(getApplicationContext(), "Login First", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this,About.class);
+        startActivity(intent);
     }
     public void Login(){
         Intent intent = new Intent(this,Login.class);
