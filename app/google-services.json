@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "691618983829",
+    "firebase_url": "https://mad-app-77510.firebaseio.com",
+    "project_id": "mad-app-77510",
+    "storage_bucket": "mad-app-77510.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691618983829:android:58c09e52ecbe7fdbba909c",
+        "android_client_info": {
+          "package_name": "rob.sample.madapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691618983829-1l2vi232ot55lcje4oci70hrul2dmm5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVKwZpN49caex_qQT7wss4ryo0kOX2PKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691618983829-1l2vi232ot55lcje4oci70hrul2dmm5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">MADProject</string>
+    <string name="room_service">ROOM SERVICE</string>
+    <string name="food_type">Food Type</string>
+    <string name="food_amount">Amount</string>
+    <string name="food_room_no">Room No</string>
+    <string name="food_date">Date</string>
+    <string name="food_time">Time</string>
+    <string name="food_id">Food ID</string>
+    <string name="cusFood_id">Customer ID</string>
+
+    <string-array name="vehicles">
+        <item>Bicycle</item>
+        <item>Car</item>
+        <item>Bike</item>
+        <item>Van</item>
+    </string-array>
+    <string name="vehicletype">Vehicle type</string>
+    <string name="description">Description</string>
+    <string name="vehicleno">Vehicle no</string>
+    <string name="ownername">Owner Name</string>
+    <string name="contact">Contact no</string>
+    <string name="add">ADD</string>
+    <string name="edit">EDIT</string>
+    <string name="delete">DELETE</string>
+    <string name="managerentaldetails">Manage Rental Details</string>
+    <string name="email">Email</string>
+    <string name="manageguide">Manage Guide Details</string>
+    <string name="guidearea">Guide Area</string>
+    <string name="guidename">Guider\'s Name</string>
+    <string name="customrental">Custom Rental</string>
+    <string name="bike">Bike</string>
+    <string name="car">Car</string>
+    <string name="bicycle">Bicycle</string>
+    <string name="van">Van</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="addbycamera">Add by Camera</string>
+    <string name="addbygallery">Add By Gallery</string>
+    <string name="view">View</string>
+
+    <string name="doctor">DOCTOR</string>
+    <string name="doc_name">Doctor Name</string>
+    <string name="doc_speciality">Doctor Speciality</string>
+    <string name="doc_address">Doctor Address</string>
+    <string name="doc_phone">Doctor Phone</string>
+    <string name="doc_email">Doctor Email</string>
+    <string name="doc_id">Doctor ID</string>
+
+    <string name="text">Enjoy with Guide ...</string>
+
+
+    <string name="vehicle_label">VEHICLES</string>
+    <string name="doc_label">DOCTORS</string>
+    <string name="guide_label">GUIDES</string>
+
+    <string name="booking_main">BOOKING</string>
+    <string name="room_main">ROOM SERVICES</string>
+    <string name="services_main">OTHER SERVICES</string>
+    <string name="feedback_main">FEEDBACK</string>
+    <string name="about_main">ABOUT</string>
+    <string name="editdelete">EDIT/DELETE</string>
+    <string name="food_name">Food</string>
+    <string name="order_id">Order ID</string>
+    <string name="food_search">Search</string>
+    <string name="Login_Main">Login</string>
+
+    <string name="channel_name_yaso">asd</string>
+    <string name="channel_description_yaso">ffff</string>
+    <string name="lb_profile">Profile</string>
+
+    <string name="hintAdultNo"> Adult No</string>
+    <string name="hintChildNo"> Child No</string>
+    <string name="hint_btnSub">Submit</string>
+    <string name="lb_roomNo1">--</string>
+    <string name="btn_Book"><![CDATA[Go to Book >]]></string>
+    <string name="lb_roomNo">01</string>
+    <string name="lb_roomNo3">--</string>
+    <string name="lb_adultNo">--</string>
+    <string name="lb_childNo">--</string>
+    <string name="lb_checkOut">mm/dd/yyyy</string>
+    <string name="lb_checkIn">mm/dd/yyyy</string>
+    <string name="lb_amount">0.00</string>
+    <string name="btn_cancel">Cancel Booking</string>
+    <string name="btn_edit">Edit</string>
+</resources>
