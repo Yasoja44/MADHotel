@@ -114,6 +114,7 @@ public class EditBookingDetails extends AppCompatActivity {
                         // if (!TextUtils.isEmpty(name)) {
                         updateArtist(id, rno, adNo, chNo, dt1, dt2);
                         Intent intent = new Intent(EditBookingDetails.this, Booking_DetailsList.class);
+                        intent.putExtra("ID",getIntent().getStringExtra("IDP"));
                         startActivity(intent);
 
                     }
@@ -133,11 +134,12 @@ public class EditBookingDetails extends AppCompatActivity {
     private boolean updateArtist(String id, String roomNo,String adultNo,String childNo,String checkIn,String checkOut) {
         //getting the specified artist reference
         DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Booking").child(id);
-        String uid=getIntent().getStringExtra(Home2.USER_ID);
+        String uid = getIntent().getStringExtra("IDP");
         //updating artist
         BookRoom BRooms = new BookRoom(id, roomNo, adultNo,childNo,checkIn,checkOut,uid);
         dR.setValue(BRooms);
-        Toast.makeText(getApplicationContext(), "Artist Updated", Toast.LENGTH_LONG).show();
+
+        Toast.makeText(getApplicationContext(), "Booking Details Updated", Toast.LENGTH_LONG).show();
         return true;
     }
 

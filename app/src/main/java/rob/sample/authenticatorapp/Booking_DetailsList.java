@@ -211,13 +211,14 @@ public class Booking_DetailsList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Booking_DetailsList.this,EditBookingDetails.class);
+                Intent intent = new Intent(Booking_DetailsList.this, EditBookingDetails.class);
                 intent.putExtra("Bookingid",bookingId);
                 intent.putExtra("Roomno",roomNo);
                 intent.putExtra("Adultno",adultNo);
                 intent.putExtra("Childno",childNo);
                 intent.putExtra("Checkin",checkIn);
                 intent.putExtra("Checkout",checkOut);
+                intent.putExtra("IDP",getIntent().getStringExtra("ID"));
                 startActivity(intent);
 
 
@@ -249,7 +250,7 @@ public class Booking_DetailsList extends AppCompatActivity {
 
     private boolean deleteArtist(String id) {
         //getting the specified artist reference
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("BookRoom").child(id);
+        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Booking").child(id);
 
         //removing artist
         dR.removeValue();

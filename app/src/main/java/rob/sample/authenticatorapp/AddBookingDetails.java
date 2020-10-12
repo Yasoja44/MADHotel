@@ -128,7 +128,10 @@ public class AddBookingDetails extends AppCompatActivity  {
 
             @Override
             public void onClick(View view) {
+
+
                 dbRef = FirebaseDatabase.getInstance().getReference("Booking");
+
                 try {
                     if (TextUtils.isEmpty(adultNo.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Empty Adult No", Toast.LENGTH_SHORT).show();
@@ -146,6 +149,7 @@ public class AddBookingDetails extends AppCompatActivity  {
                         String rNo = getIntent().getStringExtra("roomNo");
                         String id = dbRef.push().getKey();
                         String Uid=getIntent().getStringExtra("ID");
+
 
                         boolean yes = checkNo(adNo,chNo);
 
@@ -179,7 +183,7 @@ public class AddBookingDetails extends AppCompatActivity  {
                     }
                 } catch (
                         NumberFormatException nfe) {
-                    Toast.makeText(getApplicationContext(), "Invalid", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "INVALID Check Again! ", Toast.LENGTH_SHORT).show();
                 }
 
 

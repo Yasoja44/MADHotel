@@ -31,15 +31,15 @@ public class RoomList extends AppCompatActivity {
         RoomList = new ArrayList<>();
 
 
-        RoomList.add(new Room(R.drawable.room01,"111","111","111","111"," Per Day: LKR 1000.00","Budget Room","01",UID));
-        RoomList.add(new Room(R.drawable.room01,"111","111","111","111"," Per Day: LKR 1200.00","Single Room","02",UID));
-        RoomList.add(new Room(R.drawable.room01,"111","111","111","111"," Per Day: LKR 1800.00","Double Room","03",UID));
-        RoomList.add(new Room(R.drawable.room01,"111","111","111","111"," Per Day: LKR 2000.00","Single Room","04",UID));
-        RoomList.add(new Room(R.drawable.room01,"111","111","111","111"," Per Day: LKR 2500.00","Single Room","05",UID));
+        RoomList.add(new Room(R.drawable.room01,"Non-AC","LCD-TV","A bedside table","Rain shower"," Per Day: LKR 1000.00","Budget Room","01",UID));
+        RoomList.add(new Room(R.drawable.room5,"Non-AC","Free Bed-Tea","IDD Call","Rain shower"," Per Day: LKR 1200.00","Single Room","02",UID));
+        RoomList.add(new Room(R.drawable.room4,"AC","LED-TV","Sitting Area","Rain shower"," Per Day: LKR 2500.00","Double Room","03",UID));
+        RoomList.add(new Room(R.drawable.room6,"AC","72-Inch Tv","Refrigerator","Bath tub"," Per Day: LKR 5000.00","Luxury Room","04",UID));
+        RoomList.add(new Room(R.drawable.room7,"Non-AC","Free Bed-Tea","Sitting Area","Rain shower"," Per Day: LKR 3500.00","Deluxe Room","05",UID));
 
         listView = (ListView) findViewById(R.id.listViewRoom);
 
-        RoomListAdapter adapter = new RoomListAdapter(this,R.layout.activity_room_details_list,RoomList);
+        RoomListAdapter adapter = new RoomListAdapter(this, R.layout.activity_room_details_list,RoomList);
         listView.setAdapter(adapter);
 
        /* dbref = FirebaseDatabase.getInstance().getReference("BookRoom");

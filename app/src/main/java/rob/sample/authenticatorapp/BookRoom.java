@@ -24,6 +24,7 @@ public class BookRoom {
         this.userId = userId;
     }
 
+
     public String getBookingId() {
         return bookingId;
     }
