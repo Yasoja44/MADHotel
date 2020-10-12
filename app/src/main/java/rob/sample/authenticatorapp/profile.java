@@ -79,7 +79,7 @@ public class profile extends AppCompatActivity {
                         intent.putExtra("ID",UID);
                         startActivity(intent);
                     }
-                        });
+                });
                 }
 
 

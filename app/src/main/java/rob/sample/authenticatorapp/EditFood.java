@@ -51,9 +51,6 @@ public class EditFood extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_edit_food);
 
         orderID = findViewById(R.id.txt_editOrderID);
-        //foodName = findViewById(R.id.txt_editFoodName);
-        //foodAmount = findViewById(R.id.txt_editAmount);
-        //roomNo = findViewById(R.id.txt_editRoomNo);
         orderDate = findViewById(R.id.txt_editDate);
         orderTime = findViewById(R.id.txt_editTime);
         imgbtnDate = findViewById(R.id.imgbtn_EditFooddatePick);
@@ -77,9 +74,6 @@ public class EditFood extends AppCompatActivity implements View.OnClickListener 
         super.onResume();
 
         orderID = findViewById(R.id.txt_editOrderID);
-        //foodName = findViewById(R.id.txt_editFoodName);
-        //foodAmount = findViewById(R.id.txt_editAmount);
-        //roomNo = findViewById(R.id.txt_editRoomNo);
         orderDate = findViewById(R.id.txt_editDate);
         orderTime = findViewById(R.id.txt_editTime);
         btnEdit.setOnClickListener(this);
@@ -133,41 +127,6 @@ public class EditFood extends AppCompatActivity implements View.OnClickListener 
         startActivity(next);
 
 
-
-        //////////////////////////////
-        /*
-        dbRef = FirebaseDatabase.getInstance().getReference();
-        Query deleteQuery = dbRef.child("Order").orderByChild("orderID").equalTo(Integer.parseInt(orderID.getText().toString().trim()));
-
-
-        deleteQuery.addListenerForSingleValueEvent(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot deleteSnapshot: dataSnapshot.getChildren()) {
-                    LocalDateTime now = LocalDateTime.now();
-                    String then = deleteSnapshot.child("orderedDateTime").getValue().toString();
-                    LocalDateTime thenLocal = LocalDateTime.parse(then);
-
-                    Duration duration = Duration.between(thenLocal, now);
-
-                    if(duration.getSeconds() < 50){
-                        deleteSnapshot.getRef().removeValue();
-                        Toast.makeText(getApplicationContext(), "Successfully Removed", Toast.LENGTH_SHORT).show();
-                    }else{
-                        Toast.makeText(getApplicationContext(), "Can Not Be Removed, Duration Passed", Toast.LENGTH_SHORT).show();
-                    }
-
-
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        }); */
     }
 
     public void Edit() {
@@ -183,9 +142,9 @@ public class EditFood extends AppCompatActivity implements View.OnClickListener 
 
         try {
 
-            if (dateTemp.length() >=8) {
+            if (dateTemp.length() <=8) {
                 Toast.makeText(getApplicationContext(), "Invalid Date, Follow DD-MM-YYYY format", Toast.LENGTH_SHORT).show();
-            } else if (timeTemp.length() >=8) {
+            } else if (timeTemp.length() <=3) {
                 Toast.makeText(getApplicationContext(), "Invalid Time, Follow HH:MM format", Toast.LENGTH_SHORT).show();
             } else {
 
@@ -249,9 +208,6 @@ public class EditFood extends AppCompatActivity implements View.OnClickListener 
 
     private void clearControls(){
         orderID.setText("");
-        foodName.setText("");
-        foodAmount.setText("");
-        roomNo.setText("");
         orderDate.setText("");
         orderTime.setText("");
     }

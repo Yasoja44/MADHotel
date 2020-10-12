@@ -3,6 +3,7 @@ package rob.sample.authenticatorapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class ManageGuideDetails extends AppCompatActivity implements View.OnClickListener {
 
@@ -105,11 +107,24 @@ public class ManageGuideDetails extends AppCompatActivity implements View.OnClic
         dbRef2 = FirebaseDatabase.getInstance().getReference();
         Query updateQuery = dbRef2.child("ManageGuide").orderByChild("gemail").equalTo(txtgEmail.getText().toString().trim());
         updateMap = new HashMap<String,Object>();
-        updateMap.put("garea",txtgArea.getText().toString().trim());
+
+        /*updateMap.put("garea",txtgArea.getText().toString().trim());
         updateMap.put("gname",txtgName.getText().toString().trim());
         updateMap.put("gdes",txtgDes.getText().toString().trim());
         updateMap.put("gcon",txtgCon.getText().toString().trim());
-        updateMap.put("gemail",txtgEmail.getText().toString().trim());
+        updateMap.put("gemail",txtgEmail.getText().toString().trim());*/
+
+        if(!TextUtils.isEmpty(txtgArea.getText().toString())){
+            updateMap.put("garea", txtgArea.getText().toString().trim());
+        }else if(!TextUtils.isEmpty(txtgName.getText().toString())) {
+            updateMap.put("gname", txtgName.getText().toString().trim());
+        }else if(!TextUtils.isEmpty(txtgDes.getText().toString())) {
+            updateMap.put("gdes", txtgDes.getText().toString().trim());
+        }else if(!TextUtils.isEmpty(txtgCon.getText().toString())) {
+            updateMap.put("gcon", txtgCon.getText().toString().trim());
+        }
+
+
         updateQuery.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
@@ -156,8 +171,12 @@ public class ManageGuideDetails extends AppCompatActivity implements View.OnClic
                 Toast.makeText(getApplicationContext(),"Empty Description",Toast.LENGTH_SHORT).show();
             else if(TextUtils.isEmpty(txtgCon.getText().toString()))
                 Toast.makeText(getApplicationContext(),"Empty Contact No",Toast.LENGTH_SHORT).show();
+            else if(!(txtgCon.getText().toString().length() == 10))
+                Toast.makeText(getApplicationContext(),"Invalid Contact No",Toast.LENGTH_SHORT).show();
             else if(TextUtils.isEmpty(txtgEmail.getText().toString()))
                 Toast.makeText(getApplicationContext(),"Empty Email Address",Toast.LENGTH_SHORT).show();
+            else if(!Patterns.EMAIL_ADDRESS.matcher(txtgEmail.getText().toString()).matches())
+                Toast.makeText(getApplicationContext(),"Invalid Email Address",Toast.LENGTH_SHORT).show();
             else{
 
                 Boolean yes = checkDes(txtgDes.getText().toString());

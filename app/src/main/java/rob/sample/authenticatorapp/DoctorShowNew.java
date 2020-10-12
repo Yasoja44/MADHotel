@@ -23,10 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DoctorShowNew extends AppCompatActivity implements View.OnClickListener{
 
-    TextView txtShow;
     Button btnEditDelete;
-    //int countInt;
-    //String count,iString,itemp;
     DatabaseReference dbRef;
     private static final String TAG = "DoctorShowNew";
     private ArrayList<String> mNames = new ArrayList<>();
@@ -38,7 +35,7 @@ public class DoctorShowNew extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_show_new);
 
-        //txtShow = findViewById(R.id.txt_viewDetails);
+
         btnEditDelete = findViewById(R.id.btn_dEditDelete);
 
         btnEditDelete.setOnClickListener(this);
@@ -47,29 +44,6 @@ public class DoctorShowNew extends AppCompatActivity implements View.OnClickList
         initImageBitmaps();
 
 
-
-        /*dbRef = FirebaseDatabase.getInstance().getReference();
-        Query showQuery = dbRef.child("Doctor").orderByChild("doctorID");
-
-        showQuery.addListenerForSingleValueEvent(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot showSnapshot: dataSnapshot.getChildren()) {
-                    txtShow.append("Doctor ID: "+showSnapshot.child("doctorID").getValue().toString() + "\n"+
-                            "Doctor Name: "+showSnapshot.child("doctorName").getValue().toString() + "\n" +
-                            "Doctor Speciality: " + showSnapshot.child("doctorSpeciality").getValue().toString() + "\n" +
-                            "Doctor Address: " + showSnapshot.child("doctorAddress").getValue().toString() + "\n" +
-                            "Doctor Phone: " + showSnapshot.child("doctorPhone").getValue().toString() + "\n" +
-                            "Doctor E-mail: " + showSnapshot.child("doctorEmail").getValue().toString() + "\n\n");
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });*/
 
     }
 

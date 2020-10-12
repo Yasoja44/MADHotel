@@ -4,34 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/b1"
+    android:background="#1B1D32"
     tools:context=".ShowGuide">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vehi_recycler_view"
-        android:layout_width="334dp"
-        android:layout_height="515dp"
+        android:layout_width="480dp"
+        android:layout_height="555dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="155dp"
         android:layout_marginEnd="8dp"
-        android:background="#DFD25A"
+        android:background="@drawable/b2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></androidx.recyclerview.widget.RecyclerView>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="134dp"
+        android:layout_width="150dp"
         android:layout_height="38dp"
-        android:layout_marginTop="16dp"
-        android:text="Guides"
+        android:layout_marginTop="10dp"
+        android:text="Custom Guide"
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="100dp"
+        android:scaleType="center"
+        android:scaleX="1.3"
+        android:scaleY="0.75"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/images" />
+
+    <TextView
+        android:id="@+id/textView21"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="127dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/text"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="125dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="44dp"
+        android:background="@drawable/vehicle_layout"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:hint="@string/search"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/vehicle_layout"
+        android:backgroundTint="#1B1D32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_search" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

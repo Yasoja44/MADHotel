@@ -21,5 +21,6 @@
         android:layout_toRightOf="@id/image"
         android:text="Text"
         android:textColor="#000"
-        android:textSize="17sp" />
+        android:textSize="15sp"
+        android:textStyle="bold" />
 </RelativeLayout>
